@@ -40,6 +40,9 @@ Slides by [**Esther Plomp**](https://estherplomp.github.io/) @ TU Delft, Faculty
 
 License: CC-BY
 
+https://doi.org/10.5281/zenodo.5841724
+
+
 
 
 
@@ -49,6 +52,10 @@ class: center, middle
 # Slides are available
 
 ### https://estherplomp.github.io/2022-PRES-Data/
+
+### https://doi.org/10.5281/zenodo.5841724
+
+
 
 ---
 class: inverse, center, middle
