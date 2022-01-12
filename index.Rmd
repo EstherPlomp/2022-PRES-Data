@@ -1,0 +1,375 @@
+---
+title: "Open Science: Data sharing"
+subtitle: "⚔<br/>with xaringan"
+author: "Esther Plomp"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: xaringan-themer.css
+    lib_dir: libs
+    self_contained: true
+    yolo: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(primary_color = "#ffffff", 
+          secondary_color = "#035AA6")
+```
+
+
+background-image: url("https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/Esther.jpg")
+background-position: 80% 80%
+background-size: 50%
+
+## Open Science: Data sharing
+Slides by [**Esther Plomp**](https://estherplomp.github.io/) @ TU Delft, Faculty of Applied Sciences
+
+License: CC-BY
+
+
+
+
+---
+class: center, middle
+
+# Slides are available
+
+### https://estherplomp.github.io/2022-PRES-Data/
+
+---
+class: inverse, center, middle
+
+# Research Data Management
+
+---
+
+# Research data
+
+Any type of information that is collected, observed, or created, in the context of research
+
+--
+- **Raw/primary data**: The data measured/recorded without manipulation
+
+--
+- **Processed/secondary data**: Data that has been modified/processed for analysis
+
+--
+
+**Data Management Plan (DMP)** to plan how to manage and share the data (see [The Turing Way for more information](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-dmp.html))
+
+
+
+
+
+---
+
+# Data Organisation
+
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/tidydata_3-small.jpg)
+
+Image by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+
+
+---
+
+## File naming
+- 20220113-PRES-Data-V001
+- [8 step guide](https://resolver.caltech.edu/CaltechAUTHORS:20200601-161923247) on how to set up your file naming convention
+- [Presentation on file naming](https://speakerdeck.com/jennybc/how-to-name-files)
+- [Stanford’s best practices](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)
+
+--
+
+## Folder structure
+- Templates by [Colomb et al.](https://doi.org/10.5281/zenodo.4410128), [Nikola](http://nikola.me/folder_structure.html) and [Barbara Vreede](https://github.com/bvreede/good-enough-project) for [cookiecutter](https://github.com/cookiecutter/cookiecutter)
+- [Find Files Faster](https://zapier.com/blog/organize-files-folders/): How to Organize Files and Folders
+- [Data Management: File organisation](https://surfdrive.surf.nl/files/index.php/s/gJtISAQABapLvnI) by Christine Malinowski
+- [Videos on project structure](https://www.youtube.com/watch?v=u6MiDFvAs9w&list=PLRPB0ZzEYegPiBteC2dRn95TX9YefYFyy&index=2) by Danielle Navarro
+
+
+
+---
+
+# Data Organisation
+
+.pull-left[
+![https://twitter.com/mdancho84/status/1426970168660529153](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/excel-dates.jpg)]
+
+
+.pull-right[
+## Spreadsheets
+
+- [Spreadsheet organisation tips](https://surfdrive.surf.nl/files/index.php/s/9aNX69fsWyAnMI8)
+- [Broman and Woo 2018](https://doi.org/10.1080/00031305.2017.1375989)
+- [Wickham 2014](https://vita.had.co.nz/papers/tidy-data.html)
+- Use tools for data validation like [OpenRefine](https://openrefine.org/)
+
+## Why? What could possibly go wrong? 
+- [a lot](http://www.eusprig.org/horror-stories.htm)
+- See the [Twitterpost source](https://twitter.com/mdancho84/status/1426970168660529153)]
+]
+
+
+---
+
+# Data Documentation
+
+.pull-left[
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/skimmed-protocol.jpg)]
+
+.pull-right[
+- (electronic) Labnotes
+- Readme files ([template](https://cornell.app.box.com/v/ReadmeTemplate))
+- [Guide for data documentation](https://doi.org/10.5281/zenodo.1914401)
+- [Data Dictionary](https://uf-repro.github.io/data-organization/slides.html)
+- [Code Book](https://libguides.library.kent.edu/SPSS/Codebooks)
+
+#### More information
+- Book: Data Management for Researchers by Kristin Briney 
+- [A Quick Guide to Organizing Computational Biology Projects](https://doi.org/10.1371/journal.pcbi.1000424) by William Noble
+- [Some Simple Guidelines for Effective Data Management](https://doi.org/10.1890/0012-9623-90.2.205) by Borer et al.
+]
+
+.footnote[[Twitterpost source](https://twitter.com/thecrobe/status/1373590641012322306)]
+
+
+---
+class: inverse, middle, center
+
+# Data Sharing
+
+---
+
+# Open Data
+
+made freely available for use and re-use by anyone and everyone
+
+--
+
+`r emo::ji("check")`  **Access** : Available (on the internet) to all on demand
+
+--
+
+`r emo::ji("recycling_symbol")` **Reuse/distribution** : Provided under terms that permit reuse and redistribution
+
+--
+
+`r emo::ji("information")` **Transparency** : Providing information about data generation/collection
+
+--
+
+`r emo::ji("international")` **Interoperability** : Interoperability with other data, machine readable formats
+
+--
+
+`r emo::ji("palms_up_together")` **Participation** : Everyone must be able to use, reuse and redistribute
+
+--
+
+`r emo::ji("plus")` **Equity** : Data is not truly open if the research process is not open to all
+
+.footnote[
+[#bropenscience is broken science](https://thepsychologist.bps.org.uk/volume-33/november-2020/bropenscience-broken-science) by Kirstie Whitaker and Olivia Guest
+
+[Open Science Beyond Open Access: For and with communities](https://doi.org/10.5281/zenodo.3946773)]
+
+
+---
+
+# Not Open Data
+
+.pull-left[
+![https://twitter.com/MadS100tist/status/1366103674989277185](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/upon-request.jpg)
+]
+
+.pull-right[
+'[odds of obtaining the dataset] fell by 17% per year'
+
+‘research data cannot be reliably preserved by individual researchers’ - [Vines et al. 2014](https://doi.org/10.1016/j.cub.2013.11.014)
+
+
+
+"We received no response to 41.3% of our data requests" - [Tedersoo et al. 2021](https://doi.org/10.1038/s41597-021-00981-0)
+]
+
+.footnote[[Meme explanation](https://knowyourmeme.com/memes/agnes-harkness-winking)
+[Twitterpost source](https://twitter.com/MadS100tist/status/1366103674989277185)]
+
+---
+
+# Open Data
+
+.pull-left[
+![](https://pbs.twimg.com/media/EVzdm1nXQAI1fY_?format=jpg&name=900x900)
+]
+
+.pull-right[
+## data repository
+online archive that curates research datasets and provides long-term access
+- Finalised datasets
+- ~10-15 years (Long term preservation)
+- Access
+- DOI = more citations/visibility
+- File format support
+
+[How can you make research data accessible?](https://www.software.ac.uk/how-can-you-make-research-data-accessible) by Esther Plomp]
+
+
+.footnote[Image by [Errant Science](https://twitter.com/ErrantScience/status/1251118457279647746)]
+
+---
+# Why not supplemental materials? 
+
+`r emo::ji("passport_control")` **Data control**: cannot be updated 
+
+--
+
+`r emo::ji("international")` **Interoperability**: not available in all formats which makes it difficult to integrate and interact with the data
+
+--
+
+`r emo::ji("check")` **Availability**: Difficult to access if the article is behind the paywall (supplemental materials are not included in the DOI and therefore the links can also break!)
+
+--
+
+`r emo::ji("award")` **Impact**: Data should be a primary research output
+
+--
+
+`r emo::ji("red")` **Publisher requirements**: Some publishers recommend using a data repository instead
+
+--
+
+[The Push to Replace Journal Supplements with Repositories](https://www.the-scientist.com/news-opinion/the-push-to-replace-journal-supplements-with-repositories--66296) 
+
+
+---
+
+# How to find a repository? 
+
+- Check publications in your field
+- [FAIRsharing](https://fairsharing.org/)
+- [re3data](https://www.re3data.org/)
+
+General repositories:
+- [4TU.ResearchData](https://researchdata.4tu.nl/en/)
+- [Zenodo](https://zenodo.org/)
+
+---
+# Data Licenses
+
+.pull-left[
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/cc-overview.jpg)
+]
+
+.pull-right[
+## Data
+[Creative Commons License Chooser](https://chooser-beta.creativecommons.org/)
+
+## Software
+[Choose an open source license](https://choosealicense.com/)
+]
+
+
+.footnote[Image [Source](https://foter.com/blog/how-to-attribute-creative-commons-photos/): CC-BY-SA]
+
+
+
+---
+
+# How to link your publication and data/code/protocols?
+
+- Publish the output before you publish the article
+
+OR
+
+- Reserve the DOI 
+
+## Use the DOI/citation in your publication
+
+Reference your data in the **Data Availability Statement** and the **References** 
+
+
+.footnote[ [The Turing Way: Linking Research Objects](https://the-turing-way.netlify.app/communication/citable/citable-linking.html)
+]
+
+---
+# Publish or reserving a DOI 
+
+### [Zenodo](https://zenodo.org/) -> [Upload](https://zenodo.org/deposit/) -> [New Upload](https://zenodo.org/deposit/new) 
+
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/data-zenodo-doi.jpg)
+
+
+
+---
+# Linking with publication
+
+### Data accessibility/within table (descriptions)
+
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/data-accessibility.jpg)
+
+### Data availability statements (at the end)
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/data-availability-statement.jpg)
+
+
+.footnote[ [Data accessibility source](https://doi.org/10.1016/j.dib.2021.107375); [Data availability statement source](https://doi.org/10.1002/ajpa.24059)
+]
+---
+
+# Linking with publication
+
+![](https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/data-references.jpg)
+
+Always check the dataset's readme file or metadata on how the contributors prefer to be cited!
+
+See [this document](https://surfdrive.surf.nl/files/index.php/f/5896617587) for more information about data/software citation.
+
+---
+
+background-image: url("https://raw.githubusercontent.com/EstherPlomp/2022-PRES-Data/main/images/schmid-2021.jpg")
+background-position: 50% 50%
+background-size: 70%
+
+# Linking data/code/publication
+.footnote[ [Publication](https://doi.org/10.1038/s41565-021-00958-5) // [Data & Code](https://doi.org/10.5281/zenodo.5059802)]
+
+---
+
+# Questions? 
+
+--
+
+# Discussion?
+--
+
+### “publication of data and codes should be mandatory"
+
+
+--
+### "All data (also raw data!) and code underlying the publications should be shared"
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+
